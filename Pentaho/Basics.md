@@ -4,5 +4,3 @@
 - [**Download Mondrian**](https://sourceforge.net/projects/mondrian/)
 
 ## Install
-- Execute **Spoon.bat**
-- 
