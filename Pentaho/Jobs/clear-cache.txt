@@ -1,0 +1,2 @@
+http://localhost:8080/pentaho/api/system/refresh/mondrianSchemaCache
+http://localhost:8080/pentaho/plugin/cda/api/clearCache

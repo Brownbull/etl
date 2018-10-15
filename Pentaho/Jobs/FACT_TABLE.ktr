@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>first</name>
+    <name>FACT_TABLE</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,9 +427,9 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2018/10/14 20:05:40.275</created_date>
+    <created_date>2018/10/15 00:09:57.370</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2018/10/14 20:05:40.275</modified_date>
+    <modified_date>2018/10/15 00:09:57.370</modified_date>
     <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
@@ -488,14 +488,14 @@
   </connection>
   <order>
     <hop>
-      <from>CSV file input</from>
+      <from>Table input</from>
       <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>CSV file input</name>
-    <type>CsvInput</type>
+    <name>Table input</name>
+    <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -504,274 +504,26 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>D:\Git\etl\data\Superstore-Sales.csv</filename>
-    <filename_field/>
-    <rownum_field/>
-    <include_filename>N</include_filename>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <header>Y</header>
-    <buffer_size>50000</buffer_size>
-    <lazy_conversion>Y</lazy_conversion>
-    <add_filename_result>N</add_filename_result>
-    <parallel>N</parallel>
-    <newline_possible>N</newline_possible>
-    <encoding/>
-    <fields>
-      <field>
-        <name>Row ID</name>
-        <type>Integer</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Order Code</name>
-        <type>Integer</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Order Date</name>
-        <type>Date</type>
-        <format>dd/MM/yyyy</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Order Priority</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>200</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Order Quantity</name>
-        <type>Integer</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Sales</name>
-        <type>Number</type>
-        <format>#.##</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Discount</name>
-        <type>Number</type>
-        <format>#.##</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Ship Mode</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>200</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Profit</name>
-        <type>Number</type>
-        <format>#.##</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Unit Price</name>
-        <type>Number</type>
-        <format>#.##</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Shipping Cost</name>
-        <type>Number</type>
-        <format>#.##</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Customer Code</name>
-        <type>Integer</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Customer Name</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>200</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Province</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>200</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Region</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>200</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Customer Segment</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>200</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Product Code</name>
-        <type>Integer</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Product Category</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>200</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Product Sub-Category</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>200</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Product Name</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>200</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Product Container</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>200</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Product Base Margin</name>
-        <type>Number</type>
-        <format>#.##</format>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>15</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>Ship Date</name>
-        <type>Date</type>
-        <format>dd/MM/yyyy</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-    </fields>
+    <connection>DW</connection>
+    <sql>SELECT
+  "Order Quantity"
+, sales
+, discount
+, profit
+, "Unit Price"
+, "Shipping Cost"
+, "Product Base Margin"
+, fk_order
+, fk_product
+, fk_customer
+, fk_date
+FROM pre_fact
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -780,8 +532,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>96</yloc>
+      <xloc>64</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -798,7 +550,7 @@
     </partitioning>
     <connection>DW</connection>
     <schema/>
-    <table>write_test</table>
+    <table>FACT_TABLE</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
@@ -815,40 +567,20 @@
     <return_field/>
     <fields>
       <field>
-        <column_name>Row ID</column_name>
-        <stream_name>Row ID</stream_name>
-      </field>
-      <field>
-        <column_name>Order Code</column_name>
-        <stream_name>Order Code</stream_name>
-      </field>
-      <field>
-        <column_name>Order Date</column_name>
-        <stream_name>Order Date</stream_name>
-      </field>
-      <field>
-        <column_name>Order Priority</column_name>
-        <stream_name>Order Priority</stream_name>
-      </field>
-      <field>
         <column_name>Order Quantity</column_name>
         <stream_name>Order Quantity</stream_name>
       </field>
       <field>
-        <column_name>Sales</column_name>
-        <stream_name>Sales</stream_name>
+        <column_name>sales</column_name>
+        <stream_name>sales</stream_name>
       </field>
       <field>
-        <column_name>Discount</column_name>
-        <stream_name>Discount</stream_name>
+        <column_name>discount</column_name>
+        <stream_name>discount</stream_name>
       </field>
       <field>
-        <column_name>Ship Mode</column_name>
-        <stream_name>Ship Mode</stream_name>
-      </field>
-      <field>
-        <column_name>Profit</column_name>
-        <stream_name>Profit</stream_name>
+        <column_name>profit</column_name>
+        <stream_name>profit</stream_name>
       </field>
       <field>
         <column_name>Unit Price</column_name>
@@ -859,52 +591,24 @@
         <stream_name>Shipping Cost</stream_name>
       </field>
       <field>
-        <column_name>Customer Code</column_name>
-        <stream_name>Customer Code</stream_name>
-      </field>
-      <field>
-        <column_name>Customer Name</column_name>
-        <stream_name>Customer Name</stream_name>
-      </field>
-      <field>
-        <column_name>Province</column_name>
-        <stream_name>Province</stream_name>
-      </field>
-      <field>
-        <column_name>Region</column_name>
-        <stream_name>Region</stream_name>
-      </field>
-      <field>
-        <column_name>Customer Segment</column_name>
-        <stream_name>Customer Segment</stream_name>
-      </field>
-      <field>
-        <column_name>Product Code</column_name>
-        <stream_name>Product Code</stream_name>
-      </field>
-      <field>
-        <column_name>Product Category</column_name>
-        <stream_name>Product Category</stream_name>
-      </field>
-      <field>
-        <column_name>Product Sub-Category</column_name>
-        <stream_name>Product Sub-Category</stream_name>
-      </field>
-      <field>
-        <column_name>Product Name</column_name>
-        <stream_name>Product Name</stream_name>
-      </field>
-      <field>
-        <column_name>Product Container</column_name>
-        <stream_name>Product Container</stream_name>
-      </field>
-      <field>
         <column_name>Product Base Margin</column_name>
         <stream_name>Product Base Margin</stream_name>
       </field>
       <field>
-        <column_name>Ship Date</column_name>
-        <stream_name>Ship Date</stream_name>
+        <column_name>fk_order</column_name>
+        <stream_name>fk_order</stream_name>
+      </field>
+      <field>
+        <column_name>fk_product</column_name>
+        <stream_name>fk_product</stream_name>
+      </field>
+      <field>
+        <column_name>fk_customer</column_name>
+        <stream_name>fk_customer</stream_name>
+      </field>
+      <field>
+        <column_name>fk_date</column_name>
+        <stream_name>fk_date</stream_name>
       </field>
     </fields>
     <cluster_schema/>
@@ -915,8 +619,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>96</yloc>
+      <xloc>192</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
